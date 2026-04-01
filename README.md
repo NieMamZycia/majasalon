@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BASE STUDIO — salon paznokci (Włocławek)
 
-## Getting Started
+Strona marketingowa: Next.js 15 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui, Framer Motion, Lucide (ikony marek jako SVG w stopce).
 
-First, run the development server:
+## Wymagania
+
+- Node.js 18.18+ (zalecane 20+)
+- npm
+
+## Uruchomienie lokalne
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aplikacja: [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build produkcyjny
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Konfiguracja pod klienta
 
-To learn more about Next.js, take a look at the following resources:
+- **Dane kontaktowe i social:** `lib/constants.ts` (telefon, e-mail, Instagram, Facebook).
+- **Mapa:** stała `MAPS_EMBED` w `lib/constants.ts` — wklej kod „Mapa osadzona” z Google Maps po znanym adresie.
+- **Domena SEO / JSON-LD:** w `app/layout.tsx` (`metadataBase`, `siteUrl`) oraz `components/json-ld.tsx` i `app/sitemap.ts` ustaw docelowy URL (np. `https://twoja-domena.pl`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Struktura tras
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Ścieżka | Opis |
+|--------|------|
+| `/` | Strona główna (8 sekcji) |
+| `/uslugi/manicure-wloclawek` | Manicure |
+| `/uslugi/pedicure-wloclawek` | Pedicure |
+| `/uslugi/hybryda` | Hybryda |
+| `/cennik` | Cennik |
+| `/galeria` | Galeria + lightbox |
+| `/kontakt` | Kontakt + formularz |
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Formularz kontaktowy jest demonstracyjny (bez API); podłącz własny endpoint lub usługę e-mail w `components/contact-form.tsx`.

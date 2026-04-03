@@ -13,13 +13,13 @@ export default function ManicurePage() {
   return (
     <ServiceDetail
       title="Manicure Włocławek"
-      intro="Zadbaj o zdrowy wygląd paznokci i skórek — manicure w BASE STUDIO to precyzja, komfort i trwały efekt."
+      intro="Zadbaj o zdrowy wygląd paznokci i skórek, manicure w BASE STUDIO to precyzja, komfort i trwały efekt."
       image={IMAGES.manicure}
-      imageAlt="Manicure Włocławek w salonie BASE STUDIO — stylizacja i pielęgnacja paznokci"
+      imageAlt="Manicure Włocławek w salonie BASE STUDIO, stylizacja i pielęgnacja paznokci"
       paragraphs={[
         "Manicure to podstawa pięknych dłoni. W naszym salonie we Włocławku oferujemy manicure klasyczny i kombinowany z dokładnym opracowaniem skórek oraz nadaniem idealnego kształtu.",
         "Pracujemy na sprawdzonych preparatach i sterylnych narzędziach. Przed zabiegiem doradzamy, jak pielęgnować paznokcie w domu, by stylizacja jak najdłużej wyglądała świeżo.",
-        "Chcesz połączyć manicure z lakierem hybrydowym? Zapraszamy także do usług hybrydowych — zobacz cennik i umów wizytę telefonicznie lub przez formularz kontaktowy.",
+        "Chcesz połączyć manicure z lakierem hybrydowym? Zapraszamy także do usług hybrydowych, zobacz cennik i umów wizytę telefonicznie lub przez formularz kontaktowy.",
       ]}
     />
   );

@@ -186,7 +186,7 @@ export function FilterableMasonry({
                 />
               </motion.div>
               <p className="rounded-lg bg-black/55 px-3 py-2 text-center text-xs text-white/90 backdrop-blur-sm">
-                Przesuń palcem: w bok — kolejne zdjęcie, w dół — zamknij
+                Przesuń palcem: w bok, kolejne zdjęcie, w dół, zamknij
               </p>
               <div className="flex justify-center gap-2">
                 <button

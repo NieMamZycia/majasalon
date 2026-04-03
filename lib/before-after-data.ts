@@ -1,4 +1,4 @@
-/** Pary zdjęć demonstracyjnych (Unsplash) — zamień na własne „przed/po”. */
+/** Pary zdjęć demonstracyjnych (Unsplash), zamień na własne „przed/po”. */
 export const BEFORE_AFTER_ITEMS = [
   {
     before:

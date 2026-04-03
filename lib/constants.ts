@@ -35,6 +35,6 @@ export const IMAGES = {
   ],
 } as const;
 
-/** Placeholder embed — zastąp dokładnym adresem z Google Maps (Udostępnij → Mapa osadzona). */
+/** Placeholder embed, zastąp dokładnym adresem z Google Maps (Udostępnij → Mapa osadzona). */
 export const MAPS_EMBED =
   "https://maps.google.com/maps?q=W%C5%82oc%C5%82awek&t=&z=13&ie=UTF8&iwloc=&output=embed";

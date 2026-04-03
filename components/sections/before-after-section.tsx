@@ -24,7 +24,7 @@ export function BeforeAfterSection() {
             </span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Zobacz efekty pracy — przykładowe zestawienia (zdjęcia demonstracyjne).
+            Zobacz efekty pracy, przykładowe zestawienia (zdjęcia demonstracyjne).
           </p>
         </div>
 
@@ -35,14 +35,14 @@ export function BeforeAfterSection() {
                 itemOne={
                   <ReactCompareSliderImage
                     src={item.before}
-                    alt="Przed stylizacją — BASE STUDIO Włocławek"
+                    alt="Przed stylizacją, BASE STUDIO Włocławek"
                     style={{ height: "100%", width: "100%", objectFit: "cover" }}
                   />
                 }
                 itemTwo={
                   <ReactCompareSliderImage
                     src={item.after}
-                    alt="Po stylizacji — BASE STUDIO Włocławek"
+                    alt="Po stylizacji, BASE STUDIO Włocławek"
                     style={{ height: "100%", width: "100%", objectFit: "cover" }}
                   />
                 }

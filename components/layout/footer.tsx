@@ -13,7 +13,7 @@ export function Footer() {
               BASE STUDIO
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Salon paznokci Włocławek — manicure, pedicure, hybryda i żel.
+              Salon paznokci Włocławek, manicure, pedicure, hybryda i żel.
             </p>
           </div>
           <div>

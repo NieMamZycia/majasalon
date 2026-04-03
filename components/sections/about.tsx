@@ -8,7 +8,7 @@ const features = [
   {
     icon: Sparkles,
     title: "Precyzja",
-    text: "Dbamy o każdy detal — kształt, skórki i trwałość stylizacji.",
+    text: "Dbamy o każdy detal, kształt, skórki i trwałość stylizacji.",
   },
   {
     icon: Heart,
@@ -45,7 +45,7 @@ export function AboutSection() {
           <MotionReveal className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-lg">
             <Image
               src={IMAGES.salon}
-              alt="Wnętrze salonu paznokci BASE STUDIO we Włocławku — manicure i pedicure"
+              alt="Wnętrze salonu paznokci BASE STUDIO we Włocławku, manicure i pedicure"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -56,7 +56,7 @@ export function AboutSection() {
           <div>
             <MotionReveal delay={0.1}>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Tworzymy stylizacje dopasowane do Twojego stylu — od klasycznego
+                Tworzymy stylizacje dopasowane do Twojego stylu, od klasycznego
                 manicure po zaawansowane zdobienia. Stawiamy na higienę, komfort i
                 naturalny efekt, który przetrwa codzienne wyzwania.
               </p>

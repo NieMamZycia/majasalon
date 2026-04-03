@@ -7,7 +7,7 @@ import { MAPS_EMBED, SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontakt do BASE STUDIO Włocławek — umów wizytę na manicure lub pedicure. Telefon, e-mail i formularz.",
+    "Kontakt do BASE STUDIO Włocławek, umów wizytę na manicure lub pedicure. Telefon, e-mail i formularz.",
 };
 
 export default function KontaktPage() {
@@ -20,7 +20,7 @@ export default function KontaktPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Masz pytania lub chcesz umówić wizytę? Zadzwoń, napisz lub skorzystaj
-            z formularza — odpowiemy tak szybko, jak to możliwe.
+            z formularza, odpowiemy tak szybko, jak to możliwe.
           </p>
         </MotionReveal>
 
@@ -61,7 +61,7 @@ export default function KontaktPage() {
             </ul>
             <div className="overflow-hidden rounded-2xl border border-border shadow-md">
               <iframe
-                title="Mapa — BASE STUDIO salon paznokci Włocławek"
+                title="Mapa, BASE STUDIO salon paznokci Włocławek"
                 src={MAPS_EMBED}
                 className="aspect-[4/3] min-h-[260px] w-full"
                 loading="lazy"

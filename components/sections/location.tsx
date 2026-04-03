@@ -17,7 +17,7 @@ export function LocationSection() {
             </span>
           </h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Zapraszamy do {SITE.address}. Napisz lub zadzwoń — chętnie umówimy
+            Zapraszamy do {SITE.address}. Napisz lub zadzwoń, chętnie umówimy
             wizytę.
           </p>
         </MotionReveal>
@@ -25,7 +25,7 @@ export function LocationSection() {
         <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
           <MotionReveal className="overflow-hidden rounded-2xl border border-border shadow-md">
             <iframe
-              title="Mapa — BASE STUDIO salon paznokci Włocławek"
+              title="Mapa, BASE STUDIO salon paznokci Włocławek"
               src={MAPS_EMBED}
               className="aspect-[4/3] min-h-[280px] w-full"
               loading="lazy"

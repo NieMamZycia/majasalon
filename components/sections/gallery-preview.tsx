@@ -18,7 +18,7 @@ export function GalleryPreviewSection() {
               </span>
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
-              Filtruj realizacje i kliknij zdjęcie — powiększenie z gestami (przesuń w
+              Filtruj realizacje i kliknij zdjęcie, powiększenie z gestami (przesuń w
               bok / w dół).
             </p>
           </div>

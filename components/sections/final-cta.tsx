@@ -39,7 +39,7 @@ export function FinalCtaSection() {
           transition={{ delay: 0.1 }}
           className="mt-4 text-muted-foreground"
         >
-          Umów wizytę w BASE STUDIO we Włocławku — manicure i pedicure na
+          Umów wizytę w BASE STUDIO we Włocławku, manicure i pedicure na
           najwyższym poziomie.
         </motion.p>
         <motion.div

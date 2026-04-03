@@ -19,7 +19,7 @@ export const SERVICES: ServiceItem[] = [
     priceFrom: "od 45 zł",
     image: IMAGES.manicure,
     imageAlt:
-      "Manicure we Włocławku w salonie BASE STUDIO — profesjonalna stylizacja paznokci",
+      "Manicure we Włocławku w salonie BASE STUDIO, profesjonalna stylizacja paznokci",
     href: "/uslugi/manicure-wloclawek",
   },
   {
@@ -30,7 +30,7 @@ export const SERVICES: ServiceItem[] = [
     priceFrom: "od 80 zł",
     image: IMAGES.pedicure,
     imageAlt:
-      "Pedicure Włocławek — pielęgnacja stóp i paznokci w salonie BASE STUDIO",
+      "Pedicure Włocławek, pielęgnacja stóp i paznokci w salonie BASE STUDIO",
     href: "/uslugi/pedicure-wloclawek",
   },
   {
@@ -47,10 +47,10 @@ export const SERVICES: ServiceItem[] = [
     slug: "zel",
     title: "Żel",
     description:
-      "Przedłużanie i wzmacnianie paznokci żelem — idealne na specjalne okazje.",
+      "Przedłużanie i wzmacnianie paznokci żelem, idealne na specjalne okazje.",
     priceFrom: "od 110 zł",
     image: IMAGES.zel,
-    imageAlt: "Paznokcie żelowe Włocławek — BASE STUDIO salon paznokci",
+    imageAlt: "Paznokcie żelowe Włocławek, BASE STUDIO salon paznokci",
     href: "/cennik#zel",
   },
   {

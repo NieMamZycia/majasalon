@@ -13,7 +13,7 @@ export const TESTIMONIALS: Testimonial[] = [
     initials: "AK",
     rating: 5,
     quote:
-      "Profesjonalne podejście i piękne zdobienia. Zawsze wychodzę z uśmiechem — polecam BASE STUDIO każdej koleżance.",
+      "Profesjonalne podejście i piękne zdobienia. Zawsze wychodzę z uśmiechem, polecam BASE STUDIO każdej koleżance.",
   },
   {
     name: "Magda W.",

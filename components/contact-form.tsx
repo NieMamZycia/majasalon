@@ -108,7 +108,7 @@ export function ContactForm({ idPrefix = "contact", className }: ContactFormProp
       </Button>
       {isSubmitSuccessful && (
         <p className="mt-3 text-sm text-[var(--sage)]" role="status">
-          Dziękujemy! Wkrótce się odezwiemy. (Demo — formularz bez backendu)
+          Dziękujemy! Wkrótce się odezwiemy. (Demo, formularz bez backendu)
         </p>
       )}
     </form>

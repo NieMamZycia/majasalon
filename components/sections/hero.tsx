@@ -31,7 +31,7 @@ export function HeroSection() {
       >
         <Image
           src={IMAGES.hero}
-          alt="Salon paznokci Włocławek BASE STUDIO — manicure i pedicure w przytulnej atmosferze"
+          alt="BASE STUDIO Stylizacja Paznokci We Włocławku"
           fill
           priority
           className="object-cover"
@@ -67,7 +67,7 @@ export function HeroSection() {
             "text-gradient-hero drop-shadow-sm"
           )}
         >
-          BASE STUDIO - Salon Paznokci Włocławek
+          BASE STUDIO Stylizacja Paznokci We Włocławku.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -75,8 +75,7 @@ export function HeroSection() {
           transition={{ delay: 0.32 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-white/92"
         >
-          Manicure, pedicure, hybryda i żel — profesjonalna stylizacja i pielęgnacja
-          w sercu Włocławka.
+          Manicure, hybryda i żel, profesjonalna stylizacja paznokci w sercu Włocławka.
         </motion.p>
 
         <motion.div

@@ -5,7 +5,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Czy hybryda niszczy paznokcie?",
-    a: "Nie — hybryda nie niszczy paznokci, jeśli jest poprawnie wykonana i profesjonalnie zdejmowana. Uszkodzenia powstają głównie przy nieprawidłowym zdzieraniu.",
+    a: "Nie, hybryda nie niszczy paznokci, jeśli jest poprawnie wykonana i profesjonalnie zdejmowana. Uszkodzenia powstają głównie przy nieprawidłowym zdzieraniu.",
   },
   {
     q: "Jak umówić wizytę?",
@@ -13,7 +13,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Czy przyjmujecie bez rezerwacji?",
-    a: "Czasem tak, ale rezerwacja jest zalecana — dzięki temu mamy pewność, że przyjmiemy Cię o wybranej godzinie.",
+    a: "Czasem tak, ale rezerwacja jest zalecana, dzięki temu mamy pewność, że przyjmiemy Cię o wybranej godzinie.",
   },
   {
     q: "Jakie formy płatności akceptujecie?",
@@ -21,7 +21,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Czy macie parking?",
-    a: "Szczegóły parkingu ustalimy po podaniu dokładnego adresu salonu — chętnie podeślemy wskazówki dojazdu.",
+    a: "Szczegóły parkingu ustalimy po podaniu dokładnego adresu salonu, chętnie podeślemy wskazówki dojazdu.",
   },
   {
     q: "Jak przygotować się do wizyty?",
@@ -29,6 +29,6 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Czy robicie paznokcie męskie?",
-    a: "Tak — oferujemy profesjonalny manicure dla panów: pielęgnację dłoni i paznokci.",
+    a: "Tak, oferujemy profesjonalny manicure dla panów: pielęgnację dłoni i paznokci.",
   },
 ] as const;

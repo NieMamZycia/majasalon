@@ -13,27 +13,27 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     src: IMAGES.gallery[0],
     alt:
-      "Manicure naturalny — realizacja BASE STUDIO salon paznokci Włocławek",
+      "Manicure naturalny, realizacja BASE STUDIO salon paznokci Włocławek",
     category: "manicure",
   },
   {
     src: IMAGES.gallery[1],
-    alt: "Stylizacja hybrydowa Włocławek — BASE STUDIO",
+    alt: "Stylizacja hybrydowa Włocławek, BASE STUDIO",
     category: "hybryda",
   },
   {
     src: IMAGES.gallery[2],
-    alt: "Pedicure i pielęgnacja stóp — BASE STUDIO Włocławek",
+    alt: "Pedicure i pielęgnacja stóp, BASE STUDIO Włocławek",
     category: "pedicure",
   },
   {
     src: IMAGES.gallery[3],
-    alt: "Manicure klasyczny — salon BASE STUDIO",
+    alt: "Manicure klasyczny, salon BASE STUDIO",
     category: "manicure",
   },
   {
     src: IMAGES.gallery[4],
-    alt: "Hybryda z połyskiem — Włocławek BASE STUDIO",
+    alt: "Hybryda z połyskiem, Włocławek BASE STUDIO",
     category: "hybryda",
   },
   {
@@ -43,12 +43,12 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     src: IMAGES.gallery[6],
-    alt: "Pedicure hybrydowy — BASE STUDIO",
+    alt: "Pedicure hybrydowy, BASE STUDIO",
     category: "pedicure",
   },
   {
     src: IMAGES.gallery[7],
-    alt: "Hybryda french — salon paznokci Włocławek",
+    alt: "Hybryda french, salon paznokci Włocławek",
     category: "hybryda",
   },
   {
@@ -58,7 +58,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     src: IMAGES.gallery[9],
-    alt: "Manicure i stylizacja — galeria BASE STUDIO",
+    alt: "Manicure i stylizacja, galeria BASE STUDIO",
     category: "manicure",
   },
 ];

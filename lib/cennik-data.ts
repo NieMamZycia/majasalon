@@ -21,7 +21,7 @@ export const CENNIK: PriceCategory[] = [
     id: "hybryda",
     title: "Hybryda",
     rows: [
-      { name: "Hybryda — jednolity kolor", price: "90 zł" },
+      { name: "Hybryda, jednolity kolor", price: "90 zł" },
       { name: "Hybryda + french / baby boomer", price: "100 zł" },
       { name: "Hybryda + lekkie zdobienie", price: "110 zł" },
       { name: "Zmiana hybrydy (bez przedłużenia)", price: "85 zł" },

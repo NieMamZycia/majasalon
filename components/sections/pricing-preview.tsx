@@ -17,7 +17,7 @@ export function PricingPreviewSection() {
             </span>
           </h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Wybierz pakiet dopasowany do okazji — zawsze możesz też umówić pojedyncze
+            Wybierz pakiet dopasowany do okazji, zawsze możesz też umówić pojedyncze
             usługi. Szczegóły na stronie cennika.
           </p>
         </MotionReveal>

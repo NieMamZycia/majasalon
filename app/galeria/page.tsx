@@ -5,7 +5,7 @@ import { FilterableMasonry } from "@/components/filterable-masonry";
 export const metadata: Metadata = {
   title: "Galeria",
   description:
-    "Galeria realizacji — manicure, pedicure, hybryda. Filtry i lightbox BASE STUDIO Włocławek.",
+    "Galeria realizacji, manicure, pedicure, hybryda. Filtry i lightbox BASE STUDIO Włocławek.",
 };
 
 export default function GaleriaPage() {
@@ -17,7 +17,7 @@ export default function GaleriaPage() {
             Galeria
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Filtruj po kategorii, najedź na zdjęcie i otwórz lightbox — przesuń w bok,
+            Filtruj po kategorii, najedź na zdjęcie i otwórz lightbox, przesuń w bok,
             by przełączać realizacje, w dół, by zamknąć.
           </p>
         </MotionReveal>

@@ -23,17 +23,6 @@ export const SERVICES: ServiceItem[] = [
     href: "/uslugi/manicure-wloclawek",
   },
   {
-    slug: "pedicure",
-    title: "Pedicure",
-    description:
-      "Relaksujący pedicure z opracowaniem stóp i wykończeniem lakierem lub bez.",
-    priceFrom: "od 80 zł",
-    image: IMAGES.pedicure,
-    imageAlt:
-      "Pedicure Włocławek, pielęgnacja stóp i paznokci w salonie BASE STUDIO",
-    href: "/uslugi/pedicure-wloclawek",
-  },
-  {
     slug: "hybryda",
     title: "Hybryda",
     description:
@@ -51,7 +40,7 @@ export const SERVICES: ServiceItem[] = [
     priceFrom: "od 110 zł",
     image: IMAGES.zel,
     imageAlt: "Paznokcie żelowe Włocławek, BASE STUDIO salon paznokci",
-    href: "/cennik#zel",
+    href: "/cennik",
   },
   {
     slug: "zdobienia",
@@ -62,15 +51,5 @@ export const SERVICES: ServiceItem[] = [
     image: IMAGES.zdobienia,
     imageAlt: "Zdobienia paznokci artystyczne Włocławek BASE STUDIO",
     href: "/galeria",
-  },
-  {
-    slug: "pielegnacja",
-    title: "Pielęgnacja",
-    description:
-      "Odżywienie, regeneracja i zabiegi wspierające zdrowy wygląd paznokci.",
-    priceFrom: "od 30 zł",
-    image: IMAGES.pielegnacja,
-    imageAlt: "Pielęgnacja dłoni i paznokci salon Włocławek",
-    href: "/cennik",
   },
 ];

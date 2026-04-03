@@ -29,8 +29,8 @@ export function ServicesSection() {
               </span>
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
-              Manicure i pedicure we Włocławku, sprawdź naszą ofertę i wybierz
-              coś dla siebie.
+              Stylizacja paznokci we Włocławku — sprawdź ofertę i wybierz coś dla
+              siebie.
             </p>
           </div>
           <Link

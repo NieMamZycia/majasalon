@@ -169,9 +169,9 @@ export function ContactForm({
         </div>
         <button
           type="submit"
-          className="mt-8 w-full rounded-full px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 sm:w-auto"
+          className="mt-8 w-full rounded-[25px] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-[filter] duration-200 hover:brightness-[0.95] sm:w-auto"
           style={{
-            background: "linear-gradient(to right, #C9A99A, #A8B5A0)",
+            background: "linear-gradient(to right, #C9A99A, #9BAA94)",
           }}
         >
           Wyślij zapytanie

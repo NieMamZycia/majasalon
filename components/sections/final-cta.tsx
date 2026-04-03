@@ -39,7 +39,7 @@ export function FinalCtaSection() {
           transition={{ delay: 0.1 }}
           className="mt-4 text-muted-foreground"
         >
-          Umów wizytę w BASE STUDIO we Włocławku, manicure i pedicure na
+          Umów wizytę w BASE STUDIO we Włocławku — stylizacja paznokci na
           najwyższym poziomie.
         </motion.p>
         <motion.div
@@ -81,7 +81,7 @@ export function FinalCtaSection() {
           className="mt-8 text-sm text-muted-foreground"
         >
           Nie wiesz, który pakiet?{" "}
-          <Link href="/cennik" className="font-semibold text-[var(--coral)] underline-offset-4 hover:underline">
+          <Link href="/#pakiety" className="font-semibold text-[var(--coral)] underline-offset-4 hover:underline">
             Zobacz pakiety
           </Link>
         </motion.p>

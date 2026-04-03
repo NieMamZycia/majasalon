@@ -6,7 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/uslugi/manicure-wloclawek",
-    "/uslugi/pedicure-wloclawek",
     "/uslugi/hybryda",
     "/cennik",
     "/galeria",

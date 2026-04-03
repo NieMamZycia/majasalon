@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { Sparkles, Heart, Award } from "lucide-react";
+import { Award, Heart, Scissors } from "lucide-react";
 import { MotionReveal } from "@/components/motion-reveal";
 import { SectionShell } from "@/components/section-shell";
 import { IMAGES } from "@/lib/constants";
 
 const features = [
   {
-    icon: Sparkles,
+    icon: Scissors,
     title: "Precyzja",
     text: "Dbamy o każdy detal, kształt, skórki i trwałość stylizacji.",
   },
@@ -20,32 +20,28 @@ const features = [
     title: "Jakość",
     text: "Sprawdzone produkty i aktualne trendy manicure.",
   },
-];
+] as const;
 
 export function AboutSection() {
   return (
     <SectionShell
-      id="o-nas"
+      id="o-mnie"
       className="section-wash-blush scroll-mt-20 py-16 sm:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <MotionReveal>
           <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold tracking-tight sm:text-4xl">
             <span className="bg-gradient-to-r from-[var(--sage)] to-[var(--blush)] bg-clip-text text-transparent">
-              O nas
+              O mnie
             </span>
           </h2>
-          <p className="mt-3 max-w-2xl text-muted-foreground">
-            BASE STUDIO to miejsce we Włocławku, gdzie stylizacja paznokci łączy się
-            z profesjonalną pielęgnacją.
-          </p>
         </MotionReveal>
 
         <div className="mt-12 grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <MotionReveal className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-lg">
             <Image
               src={IMAGES.salon}
-              alt="Wnętrze salonu paznokci BASE STUDIO we Włocławku, manicure i pedicure"
+              alt="Wnętrze salonu paznokci BASE STUDIO we Włocławku, stylizacja paznokci"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -53,24 +49,38 @@ export function AboutSection() {
             />
           </MotionReveal>
 
-          <div>
+          <div className="text-left">
             <MotionReveal delay={0.1}>
-              <p className="text-base leading-relaxed text-muted-foreground">
-                Tworzymy stylizacje dopasowane do Twojego stylu, od klasycznego
-                manicure po zaawansowane zdobienia. Stawiamy na higienę, komfort i
-                naturalny efekt, który przetrwa codzienne wyzwania.
-              </p>
+              <div className="space-y-5 text-base leading-relaxed text-[#6B6B6B]">
+                <p>
+                  Tutaj zaczyna się moja podróż. Poznaj moje miejsce, mnie i to czym się
+                  zajmuję.
+                </p>
+                <p>Mam na imię Maja i zapraszam Cię do Base Studio.</p>
+                <p>
+                  W stylizacji paznokci stawiam na jakość i doskonałą obsługę. Dołącz do grona
+                  moich klientów, a wspólnie rozwiniemy umiejętności i wspólnie odniesiemy
+                  sukces = zadowolenie.
+                </p>
+                <p>
+                  Cieszę się, że jesteś tutaj i jesteś częścią naszej historii.
+                </p>
+              </div>
             </MotionReveal>
-            <ul className="mt-10 space-y-6">
+
+            <ul className="mt-10 space-y-5">
               {features.map((f, i) => (
                 <MotionReveal key={f.title} delay={0.15 + i * 0.08}>
-                  <li className="flex gap-4">
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-[var(--blush)]/40 text-primary">
-                      <f.icon className="size-5" aria-hidden />
+                  <li className="flex items-start gap-4">
+                    <span
+                      className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#F0E0DC]"
+                      aria-hidden
+                    >
+                      <f.icon className="size-6 text-[#9BAA94]" strokeWidth={2} />
                     </span>
                     <div>
-                      <h3 className="font-medium text-foreground">{f.title}</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">{f.text}</p>
+                      <h3 className="mb-1 font-semibold text-[#3D3D3D]">{f.title}</h3>
+                      <p className="text-sm text-[#6B6B6B]">{f.text}</p>
                     </div>
                   </li>
                 </MotionReveal>

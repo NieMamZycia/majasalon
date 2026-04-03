@@ -1,21 +1,28 @@
 import type { ReactNode } from "react";
+import { Check, Flame } from "lucide-react";
 import { MotionReveal } from "@/components/motion-reveal";
+import { cn } from "@/lib/utils";
 
 const CARD_GRADIENT =
-  "linear-gradient(180deg, #F0E6DE 0%, #C5D1C0 100%)";
-const BTN_GRADIENT =
-  "linear-gradient(to right, #C9A99A, #A8B5A0)";
+  "linear-gradient(180deg, #FAF7F4 0%, #F0E6DE 40%, #D8E2D4 80%, #C5D1C0 100%)";
+const BTN_GRADIENT = "linear-gradient(to right, #C9A99A, #9BAA94)";
 
 function CheckItem({ children }: { children: ReactNode }) {
   return (
-    <li className="flex gap-2 text-sm text-[#4A4A4A]">
-      <span className="shrink-0 font-semibold text-[#7D8E74]" aria-hidden>
-        ✓
+    <li className="flex gap-3 text-sm text-[#4A4A4A]">
+      <span
+        className="flex size-[22px] shrink-0 items-center justify-center rounded-full bg-[#9BAA94]"
+        aria-hidden
+      >
+        <Check className="size-3 text-white" strokeWidth={3} />
       </span>
-      <span>{children}</span>
+      <span className="pt-0.5">{children}</span>
     </li>
   );
 }
+
+const discountBadge =
+  "absolute top-4 right-4 z-[1] rounded-[20px] bg-[#B86B3A] px-[14px] py-1.5 text-xs font-bold text-white";
 
 export function PackagesSection() {
   return (
@@ -37,18 +44,17 @@ export function PackagesSection() {
           </p>
         </MotionReveal>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid items-center gap-6 md:grid-cols-3 md:gap-5 md:py-3">
           <MotionReveal delay={0.05}>
             <article
-              className="relative flex h-full flex-col rounded-[20px] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+              className={cn(
+                "package-card relative flex h-full flex-col rounded-[20px] p-8 pb-8 pt-14 shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out",
+                "hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.12)]"
+              )}
               style={{ background: CARD_GRADIENT }}
             >
-              <span className="absolute right-6 top-6 rounded-full bg-[#B86B3A] px-2.5 py-0.5 text-xs font-semibold text-white">
-                -15%
-              </span>
-              <h3 className="font-serif text-xl font-semibold text-[#3D3D3D]">
-                Basic
-              </h3>
+              <span className={discountBadge}>-15%</span>
+              <h3 className="font-serif text-xl font-semibold text-[#3D3D3D]">A</h3>
               <p className="mt-3 text-2xl font-bold tracking-tight text-[#3D3D3D]">
                 3 WIZYTY
               </p>
@@ -60,7 +66,7 @@ export function PackagesSection() {
               </ul>
               <a
                 href="/kontakt"
-                className="mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95"
+                className="mt-8 inline-flex w-full items-center justify-center rounded-[25px] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-[filter] duration-200 hover:brightness-[0.95]"
                 style={{ background: BTN_GRADIENT }}
               >
                 Kup pakiet
@@ -70,18 +76,26 @@ export function PackagesSection() {
 
           <MotionReveal delay={0.1}>
             <article
-              className="relative flex h-full flex-col rounded-[20px] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+              className={cn(
+                "package-card relative z-[2] flex h-full flex-col rounded-[20px] border-2 border-[#9BAA94] p-8 pb-8 pt-14 shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out",
+                "md:scale-[1.03]",
+                "hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.12)]"
+              )}
               style={{ background: CARD_GRADIENT }}
             >
-              <span className="absolute left-6 top-6 flex items-center gap-1 rounded-full bg-[#C67D4A] px-2.5 py-0.5 text-xs font-semibold text-white">
-                HIT <span aria-hidden>🔥</span>
-              </span>
-              <span className="absolute right-6 top-6 rounded-full bg-[#B86B3A] px-2.5 py-0.5 text-xs font-semibold text-white">
-                -25%
-              </span>
-              <h3 className="font-serif text-xl font-semibold text-[#3D3D3D]">
-                Standard
-              </h3>
+              <div
+                className="absolute top-4 right-4 z-[1] flex max-w-[calc(100%-2rem)] flex-wrap items-center justify-end gap-2"
+                aria-hidden
+              >
+                <span className="flex items-center gap-1 rounded-[20px] bg-[#C67D4A] px-[14px] py-1.5 text-xs font-bold text-white">
+                  HIT
+                  <Flame className="size-3.5 shrink-0" aria-hidden />
+                </span>
+                <span className="rounded-[20px] bg-[#B86B3A] px-[14px] py-1.5 text-xs font-bold text-white">
+                  -25%
+                </span>
+              </div>
+              <h3 className="font-serif text-xl font-semibold text-[#3D3D3D]">B</h3>
               <p className="mt-3 text-2xl font-bold tracking-tight text-[#3D3D3D]">
                 5 WIZYT
               </p>
@@ -93,7 +107,7 @@ export function PackagesSection() {
               </ul>
               <a
                 href="/kontakt"
-                className="mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95"
+                className="mt-8 inline-flex w-full items-center justify-center rounded-[25px] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-[filter] duration-200 hover:brightness-[0.95]"
                 style={{ background: BTN_GRADIENT }}
               >
                 Kup pakiet
@@ -103,7 +117,10 @@ export function PackagesSection() {
 
           <MotionReveal delay={0.15}>
             <article
-              className="flex h-full flex-col rounded-[20px] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+              className={cn(
+                "package-card relative flex h-full flex-col rounded-[20px] p-8 pb-8 pt-12 shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out",
+                "hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.12)]"
+              )}
               style={{ background: CARD_GRADIENT }}
             >
               <h3 className="font-serif text-xl font-semibold text-[#3D3D3D]">
@@ -120,7 +137,7 @@ export function PackagesSection() {
               </ul>
               <a
                 href="/kontakt"
-                className="mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95"
+                className="mt-8 inline-flex w-full items-center justify-center rounded-[25px] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-[filter] duration-200 hover:brightness-[0.95]"
                 style={{ background: BTN_GRADIENT }}
               >
                 Kup voucher

@@ -19,6 +19,6 @@ export const BEFORE_AFTER_ITEMS = [
       "https://images.unsplash.com/photo-1599206676335-193c82b13c9e?w=800&q=80",
     after:
       "https://images.unsplash.com/photo-1602342540437-d3a5f6a88a3e?w=800&q=80",
-    caption: "Pedicure SPA + hybryda",
+    caption: "SPA dłoni + hybryda",
   },
 ] as const;

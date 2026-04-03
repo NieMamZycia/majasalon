@@ -17,19 +17,25 @@ export function CennikBlocks({
         <article
           key={cat.id}
           id={cat.id}
-          className="scroll-mt-24 rounded-2xl border border-border bg-card p-6 shadow-sm"
+          className="scroll-mt-24 rounded-2xl border border-black/[0.04] border-l-4 border-l-[#9BAA94] bg-[#FAF7F4] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] sm:p-8"
         >
-          <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-foreground">
+          <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#3D3D3D]">
             {cat.title}
           </h3>
-          <ul className="mt-4 space-y-3">
+          <ul className="mt-5 space-y-0">
             {cat.rows.map((row) => (
               <li
                 key={row.name}
-                className="flex items-baseline justify-between gap-4 border-b border-border/60 pb-3 last:border-0 last:pb-0"
+                className="group flex items-end gap-3 rounded-lg px-2 py-3 transition-colors hover:bg-[#B8C9B5]/15 sm:px-3"
               >
-                <span className="text-sm text-muted-foreground">{row.name}</span>
-                <span className="shrink-0 text-sm font-semibold text-primary">
+                <div className="flex min-w-0 flex-1 items-baseline gap-2">
+                  <span className="text-sm text-[#3D3D3D]">{row.name}</span>
+                  <span
+                    className="min-h-[1px] min-w-[0.5rem] flex-1 border-b border-dotted border-[#9BAA94]/50"
+                    aria-hidden
+                  />
+                </div>
+                <span className="shrink-0 text-sm font-semibold text-[#7D8E74]">
                   {row.price}
                 </span>
               </li>
@@ -41,7 +47,7 @@ export function CennikBlocks({
         <div className="flex items-center justify-center md:col-span-2">
           <Link
             href="/cennik"
-            className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            className="text-sm font-medium text-[#7D8E74] underline-offset-4 hover:underline"
           >
             Pełny cennik
           </Link>

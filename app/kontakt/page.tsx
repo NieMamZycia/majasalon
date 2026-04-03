@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { MotionReveal } from "@/components/motion-reveal";
 import { ContactForm } from "@/components/contact-form";
-import { MAPS_EMBED, SITE } from "@/lib/constants";
+import { MapEmbed } from "@/components/map-embed";
+import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontakt do BASE STUDIO Włocławek, umów wizytę na manicure lub pedicure. Telefon, e-mail i formularz.",
+    "Kontakt do BASE STUDIO Włocławek — umów wizytę na stylizację paznokci. Telefon, e-mail i formularz.",
 };
 
 export default function KontaktPage() {
@@ -31,7 +32,11 @@ export default function KontaktPage() {
                 <MapPin className="mt-0.5 size-5 shrink-0 text-primary" />
                 <span>
                   <strong className="block text-foreground">Adres</strong>
-                  {SITE.address} (dokładny adres wkrótce)
+                  {SITE.addressLines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </span>
               </li>
               <li>
@@ -59,25 +64,13 @@ export default function KontaktPage() {
                 </a>
               </li>
             </ul>
-            <div className="overflow-hidden rounded-2xl border border-border shadow-md">
-              <iframe
-                title="Mapa, BASE STUDIO salon paznokci Włocławek"
-                src={MAPS_EMBED}
-                className="aspect-[4/3] min-h-[260px] w-full"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
+            <div className="flex justify-center sm:justify-start">
+              <MapEmbed />
             </div>
           </MotionReveal>
 
           <MotionReveal delay={0.1}>
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
-              <h2 className="font-[family-name:var(--font-playfair)] text-xl font-semibold">
-                Formularz kontaktowy
-              </h2>
-              <ContactForm idPrefix="kontakt" className="mt-6" />
-            </div>
+            <ContactForm idPrefix="kontakt" />
           </MotionReveal>
         </div>
       </div>

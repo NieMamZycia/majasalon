@@ -3,15 +3,27 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+
+const fieldFocus =
+  "focus-visible:border-[#9BAA94] focus-visible:ring-[#9BAA94]/35";
+
+const interestOptions = [
+  { id: "manicure", label: "Manicure" },
+  { id: "stylizacja", label: "Stylizacja paznokci" },
+  { id: "przedluzanie", label: "Przedłużanie paznokci" },
+  { id: "pakiet", label: "Pakiet wizyt" },
+  { id: "voucher", label: "Voucher prezentowy" },
+] as const;
 
 const schema = z.object({
   name: z.string().min(2, "Podaj imię"),
   email: z.string().email("Podaj poprawny e-mail"),
   phone: z.string().min(9, "Podaj numer telefonu"),
+  interests: z.array(z.string()).optional(),
   message: z.string().min(10, "Wiadomość jest za krótka"),
 });
 
@@ -20,9 +32,14 @@ export type ContactFormValues = z.infer<typeof schema>;
 type ContactFormProps = {
   idPrefix?: string;
   className?: string;
+  title?: string;
 };
 
-export function ContactForm({ idPrefix = "contact", className }: ContactFormProps) {
+export function ContactForm({
+  idPrefix = "contact",
+  className,
+  title = "Umów wizytę",
+}: ContactFormProps) {
   const {
     register,
     handleSubmit,
@@ -34,6 +51,7 @@ export function ContactForm({ idPrefix = "contact", className }: ContactFormProp
       name: "",
       email: "",
       phone: "",
+      interests: [],
       message: "",
     },
   });
@@ -45,72 +63,125 @@ export function ContactForm({ idPrefix = "contact", className }: ContactFormProp
   const id = (field: string) => `${idPrefix}-${field}`;
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className={className}
-      noValidate
+    <div
+      className={`rounded-[20px] bg-[#FDFCFA] p-8 shadow-[0_4px_24px_rgba(0,0,0,0.08)] sm:p-10 ${className ?? ""}`}
     >
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div className="space-y-2">
-          <Label htmlFor={id("name")}>Imię</Label>
+      <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#3D3D3D]">
+        {title}
+      </h3>
+      <form onSubmit={handleSubmit(onSubmit)} className="mt-6" noValidate>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="space-y-2">
+            <Label htmlFor={id("name")} className="text-[#4A4A4A]">
+              Imię
+            </Label>
+            <Input
+              id={id("name")}
+              placeholder="Twoje imię"
+              aria-invalid={!!errors.name}
+              className={fieldFocus}
+              {...register("name")}
+            />
+            {errors.name && (
+              <p className="text-xs text-destructive">{errors.name.message}</p>
+            )}
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor={id("phone")} className="text-[#4A4A4A]">
+              Telefon
+            </Label>
+            <Input
+              id={id("phone")}
+              type="tel"
+              placeholder="+48..."
+              aria-invalid={!!errors.phone}
+              className={fieldFocus}
+              {...register("phone")}
+            />
+            {errors.phone && (
+              <p className="text-xs text-destructive">{errors.phone.message}</p>
+            )}
+          </div>
+        </div>
+        <div className="mt-4 space-y-2">
+          <Label htmlFor={id("email")} className="text-[#4A4A4A]">
+            E-mail
+          </Label>
           <Input
-            id={id("name")}
-            placeholder="Twoje imię"
-            aria-invalid={!!errors.name}
-            {...register("name")}
+            id={id("email")}
+            type="email"
+            placeholder="twoj@email.pl"
+            aria-invalid={!!errors.email}
+            className={fieldFocus}
+            {...register("email")}
           />
-          {errors.name && (
-            <p className="text-xs text-destructive">{errors.name.message}</p>
+          {errors.email && (
+            <p className="text-xs text-destructive">{errors.email.message}</p>
           )}
         </div>
-        <div className="space-y-2">
-          <Label htmlFor={id("phone")}>Telefon</Label>
-          <Input
-            id={id("phone")}
-            type="tel"
-            placeholder="+48 ..."
-            aria-invalid={!!errors.phone}
-            {...register("phone")}
+
+        <fieldset className="mt-6 space-y-3">
+          <legend className="text-sm font-medium text-[#4A4A4A]">
+            Czym jesteś zainteresowana?
+          </legend>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {interestOptions.map((opt) => (
+              <label
+                key={opt.id}
+                className="flex cursor-pointer items-center gap-3 rounded-lg py-1"
+              >
+                <input
+                  type="checkbox"
+                  value={opt.id}
+                  className="peer sr-only"
+                  {...register("interests")}
+                />
+                <span
+                  className="flex size-5 shrink-0 items-center justify-center rounded border-2 border-[#9BAA94] bg-white transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-[#9BAA94]/40 peer-checked:border-[#7D8E74] peer-checked:bg-[#9BAA94] peer-checked:[&_svg]:opacity-100"
+                  aria-hidden
+                >
+                  <Check
+                    strokeWidth={3}
+                    className="size-3 text-white opacity-0 transition-opacity"
+                  />
+                </span>
+                <span className="text-sm text-[#4A4A4A]">{opt.label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <div className="mt-4 space-y-2">
+          <Label htmlFor={id("message")} className="text-[#4A4A4A]">
+            Wiadomość
+          </Label>
+          <Textarea
+            id={id("message")}
+            rows={4}
+            placeholder="Dodatkowe informacje, preferowany termin..."
+            aria-invalid={!!errors.message}
+            className={fieldFocus}
+            {...register("message")}
           />
-          {errors.phone && (
-            <p className="text-xs text-destructive">{errors.phone.message}</p>
+          {errors.message && (
+            <p className="text-xs text-destructive">{errors.message.message}</p>
           )}
         </div>
-      </div>
-      <div className="mt-4 space-y-2">
-        <Label htmlFor={id("email")}>E-mail</Label>
-        <Input
-          id={id("email")}
-          type="email"
-          placeholder="twoj@email.pl"
-          aria-invalid={!!errors.email}
-          {...register("email")}
-        />
-        {errors.email && (
-          <p className="text-xs text-destructive">{errors.email.message}</p>
+        <button
+          type="submit"
+          className="mt-8 w-full rounded-full px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 sm:w-auto"
+          style={{
+            background: "linear-gradient(to right, #C9A99A, #A8B5A0)",
+          }}
+        >
+          Wyślij zapytanie
+        </button>
+        {isSubmitSuccessful && (
+          <p className="mt-3 text-sm text-[#7D8E74]" role="status">
+            Dziękujemy! Wkrótce się odezwiemy. (Demo, formularz bez backendu)
+          </p>
         )}
-      </div>
-      <div className="mt-4 space-y-2">
-        <Label htmlFor={id("message")}>Wiadomość</Label>
-        <Textarea
-          id={id("message")}
-          rows={4}
-          placeholder="Czego dotyczy wizyta?"
-          aria-invalid={!!errors.message}
-          {...register("message")}
-        />
-        {errors.message && (
-          <p className="text-xs text-destructive">{errors.message.message}</p>
-        )}
-      </div>
-      <Button type="submit" className="mt-6 w-full sm:w-auto">
-        Wyślij wiadomość
-      </Button>
-      {isSubmitSuccessful && (
-        <p className="mt-3 text-sm text-[var(--sage)]" role="status">
-          Dziękujemy! Wkrótce się odezwiemy. (Demo, formularz bez backendu)
-        </p>
-      )}
-    </form>
+      </form>
+    </div>
   );
 }

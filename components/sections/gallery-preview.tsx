@@ -17,9 +17,10 @@ export function GalleryPreviewSection() {
                 Galeria
               </span>
             </h2>
-            <p className="mt-3 max-w-xl text-muted-foreground">
-              Filtruj realizacje i kliknij zdjęcie, powiększenie z gestami (przesuń w
-              bok / w dół).
+            <p className="mt-3 max-w-2xl text-[#6B6B6B]">
+              Odkryj moją kolekcję kreatywnych prac. Każdy element pokazuje dbałość o
+              szczegóły i zaangażowanie w dostarczanie wyników przekraczających
+              oczekiwania.
             </p>
           </div>
           <Link

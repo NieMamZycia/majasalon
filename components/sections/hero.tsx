@@ -75,7 +75,7 @@ export function HeroSection() {
           transition={{ delay: 0.32 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-white/92"
         >
-          Manicure, hybryda i żel, profesjonalna stylizacja paznokci w sercu Włocławka.
+          Stylizacja paznokci we Włocławku.
         </motion.p>
 
         <motion.div

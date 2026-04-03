@@ -4,8 +4,8 @@ import { ServicesSection } from "@/components/sections/services";
 import { GalleryPreviewSection } from "@/components/sections/gallery-preview";
 import { BeforeAfterSection } from "@/components/sections/before-after-section";
 import { PricingPreviewSection } from "@/components/sections/pricing-preview";
-import { FAQSection } from "@/components/sections/faq-section";
-import { TestimonialsSection } from "@/components/sections/testimonials";
+import { PackagesSection } from "@/components/sections/packages-section";
+import { PromotionsSection } from "@/components/sections/promotions-section";
 import { LocationSection } from "@/components/sections/location";
 
 export default function HomePage() {
@@ -17,8 +17,8 @@ export default function HomePage() {
       <GalleryPreviewSection />
       <BeforeAfterSection />
       <PricingPreviewSection />
-      <FAQSection />
-      <TestimonialsSection />
+      <PackagesSection />
+      <PromotionsSection />
       <LocationSection />
     </>
   );

@@ -8,12 +8,14 @@ const jsonLd = {
       "@id": "https://basestudio.pl/#business",
       name: "BASE STUDIO",
       description:
-        "Profesjonalny salon paznokci we Włocławku. Manicure, pedicure, stylizacja hybrydowa i żelowa.",
+        "Stylizacja paznokci we Włocławku — manicure, hybryda, żel i zdobienia.",
       url: "https://basestudio.pl",
       telephone: SITE.phone,
       email: SITE.email,
       address: {
         "@type": "PostalAddress",
+        streetAddress: "ul. Sienkiewicza 12A, piętro 1",
+        postalCode: "87-800",
         addressLocality: "Włocławek",
         addressCountry: "PL",
       },

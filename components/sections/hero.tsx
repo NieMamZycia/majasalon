@@ -59,7 +59,7 @@ export function HeroSection() {
             "text-gradient-hero drop-shadow-sm"
           )}
         >
-          BASE STUDIO Stylizacja Paznokci.
+          BASE STUDIO Stylizacja Paznokci
         </motion.h1>
 
         <motion.div

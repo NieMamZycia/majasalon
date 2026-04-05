@@ -28,6 +28,7 @@ npm start
 - **Dane kontaktowe i social:** `lib/constants.ts` (telefon, e-mail, Instagram, Facebook, adres).
 - **Mapa:** stała `MAPS_EMBED` w `lib/constants.ts` — URL osadzonej mapy Google.
 - **Domena SEO / JSON-LD:** w `app/layout.tsx` (`metadataBase`, `siteUrl`) oraz `components/json-ld.tsx` i `app/sitemap.ts` ustaw docelowy URL (np. `https://twoja-domena.pl`).
+- **Formularz kontaktowy (Resend):** skopiuj `.env.example` do `.env.local` i ustaw `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM`. Endpoint: `POST /api/contact` (`app/api/contact/route.ts`). Na Vercel dodaj te same zmienne w ustawieniach projektu. **Nie commituj** pliku `.env.local` — zawiera klucz API.
 
 ## Struktura tras
 
@@ -38,6 +39,4 @@ npm start
 | `/uslugi/hybryda` | Hybryda |
 | `/cennik` | Cennik |
 | `/galeria` | Galeria + lightbox |
-| `/kontakt` | Kontakt + formularz „Umów wizytę” |
-
-Formularz kontaktowy jest demonstracyjny (bez API); podłącz własny endpoint lub usługę e-mail w `components/contact-form.tsx`.
+| `/kontakt` | Kontakt + formularz „Umów wizytę” (wysyłka przez Resend) |

@@ -19,7 +19,7 @@ export const SERVICES: ServiceItem[] = [
     priceFrom: "od 60 zł",
     image: IMAGES.manicure,
     imageAlt:
-      "Manicure we Włocławku w salonie BASE STUDIO, profesjonalna stylizacja paznokci",
+      "Profesjonalna stylizacja paznokci — manicure hybrydowy w kolorze nude, owalny kształt, BASE STUDIO",
     href: "/uslugi/manicure-wloclawek",
   },
   {

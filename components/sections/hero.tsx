@@ -31,7 +31,7 @@ export function HeroSection() {
       >
         <Image
           src={IMAGES.hero}
-          alt="BASE STUDIO Stylizacja Paznokci We Włocławku"
+          alt="BASE STUDIO — stylizacja paznokci"
           fill
           priority
           className="object-cover"
@@ -50,39 +50,23 @@ export function HeroSection() {
       <FloatingIcons />
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center sm:px-6">
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="badge-gradient inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--studio-text)] shadow-md"
-        >
-          Włocławek
-        </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.65 }}
+          transition={{ delay: 0.15, duration: 0.65 }}
           className={cn(
-            "mt-5 font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl",
+            "font-[family-name:var(--font-playfair)] text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl",
             "text-gradient-hero drop-shadow-sm"
           )}
         >
-          BASE STUDIO Stylizacja Paznokci We Włocławku.
+          BASE STUDIO Stylizacja Paznokci.
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.32 }}
-          className="mx-auto mt-6 max-w-2xl text-lg text-white/92"
-        >
-          Stylizacja paznokci we Włocławku.
-        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.42 }}
-          className="mx-auto mt-12 grid max-w-xl grid-cols-3 gap-4 text-center sm:gap-6"
+          transition={{ delay: 0.32 }}
+          className="mx-auto mt-10 grid max-w-xl grid-cols-3 gap-4 text-center sm:gap-6"
         >
           <div className="rounded-2xl border border-white/15 bg-white/10 px-2 py-4 backdrop-blur-md sm:px-4">
             <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white sm:text-3xl">

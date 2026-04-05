@@ -41,7 +41,7 @@ export function AboutSection() {
           <MotionReveal className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-lg">
             <Image
               src={IMAGES.salon}
-              alt="Wnętrze salonu paznokci BASE STUDIO we Włocławku, stylizacja paznokci"
+              alt="Wnętrze salonu paznokci BASE STUDIO, stylizacja paznokci"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

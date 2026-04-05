@@ -5,7 +5,7 @@ import { CennikBlocks } from "@/components/cennik-blocks";
 export const metadata: Metadata = {
   title: "Cennik",
   description:
-    "Cennik manicure i stylizacji paznokci we Włocławku, BASE STUDIO. Hybryda, żel, przedłużenia.",
+    "Cennik manicure i stylizacji paznokci, BASE STUDIO. Hybryda, żel, przedłużenia.",
 };
 
 export default function CennikPage() {

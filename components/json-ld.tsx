@@ -8,7 +8,7 @@ const jsonLd = {
       "@id": "https://basestudio.pl/#business",
       name: "BASE STUDIO",
       description:
-        "Stylizacja paznokci we Włocławku — manicure, hybryda, żel i zdobienia.",
+        "Stylizacja paznokci — manicure, hybryda, żel i zdobienia.",
       url: "https://basestudio.pl",
       telephone: SITE.phone,
       email: SITE.email,

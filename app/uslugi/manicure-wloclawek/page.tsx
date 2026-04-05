@@ -15,7 +15,7 @@ export default function ManicurePage() {
       title="Manicure Włocławek"
       intro="Zadbaj o zdrowy wygląd paznokci i skórek, manicure w BASE STUDIO to precyzja, komfort i trwały efekt."
       image={IMAGES.manicure}
-      imageAlt="Manicure Włocławek w salonie BASE STUDIO, stylizacja i pielęgnacja paznokci"
+      imageAlt="Profesjonalna stylizacja paznokci — manicure hybrydowy nude, owalny kształt, BASE STUDIO Włocławek"
       paragraphs={[
         "Manicure to podstawa pięknych dłoni. W naszym salonie we Włocławku oferujemy manicure klasyczny i kombinowany z dokładnym opracowaniem skórek oraz nadaniem idealnego kształtu.",
         "Pracujemy na sprawdzonych preparatach i sterylnych narzędziach. Przed zabiegiem doradzamy, jak pielęgnować paznokcie w domu, by stylizacja jak najdłużej wyglądała świeżo.",

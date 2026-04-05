@@ -28,11 +28,11 @@ const siteUrl = "https://basestudio.pl";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "BASE STUDIO — Stylizacja paznokci Włocławek",
-    template: "%s | BASE STUDIO Włocławek",
+    default: "BASE STUDIO — Stylizacja paznokci",
+    template: "%s | BASE STUDIO",
   },
   description:
-    "Stylizacja paznokci we Włocławku. Manicure, hybryda, żel i zdobienia. Umów wizytę ☎️",
+    "Stylizacja paznokci. Manicure, hybryda, żel i zdobienia. Umów wizytę ☎️",
   keywords: [
     "salon paznokci włocławek",
     "manicure włocławek",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: siteUrl,
     siteName: "BASE STUDIO",
-    title: "BASE STUDIO — Stylizacja paznokci Włocławek",
+    title: "BASE STUDIO — Stylizacja paznokci",
     description:
-      "Stylizacja paznokci we Włocławku. Manicure, hybryda, żel i zdobienia.",
+      "Stylizacja paznokci. Manicure, hybryda, żel i zdobienia.",
   },
   robots: { index: true, follow: true },
 };

@@ -1,6 +1,6 @@
 export const SITE = {
   name: "BASE STUDIO",
-  tagline: "Stylizacja paznokci we Włocławku",
+  tagline: "Stylizacja paznokci",
   phone: "+48 665 931 749",
   phoneHref: "tel:+48665931749",
   email: "kontakt@basestudio.pl",
@@ -19,7 +19,7 @@ export const SITE = {
 
 export const IMAGES = {
   hero: "/images/hero-base-studio.png",
-  manicure: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=800&q=80",
+  manicure: "/images/uslugi-manicure.png",
   hybryda: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=800&q=80",
   zel: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=800&q=80",
   zdobienia: "/images/zdobienia.png",

@@ -1,12 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import {
+  contactFormSchema,
+  type ContactFormValues,
+} from "@/lib/contact-schema";
 
 const fieldFocus =
   "focus-visible:border-[#9BAA94] focus-visible:ring-[#9BAA94]/35";
@@ -19,16 +23,6 @@ const interestOptions = [
   { id: "voucher", label: "Voucher prezentowy" },
 ] as const;
 
-const schema = z.object({
-  name: z.string().min(2, "Podaj imię"),
-  email: z.string().email("Podaj poprawny e-mail"),
-  phone: z.string().min(9, "Podaj numer telefonu"),
-  interests: z.array(z.string()).optional(),
-  message: z.string().min(10, "Wiadomość jest za krótka"),
-});
-
-export type ContactFormValues = z.infer<typeof schema>;
-
 type ContactFormProps = {
   idPrefix?: string;
   className?: string;
@@ -40,13 +34,17 @@ export function ContactForm({
   className,
   title = "Umów wizytę",
 }: ContactFormProps) {
+  const [banner, setBanner] = useState<
+    { type: "ok" | "err"; text: string } | null
+  >(null);
+
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -56,8 +54,37 @@ export function ContactForm({
     },
   });
 
-  function onSubmit() {
-    reset();
+  async function onSubmit(data: ContactFormValues) {
+    setBanner(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const payload = (await res.json().catch(() => ({}))) as {
+        error?: string;
+      };
+      if (!res.ok) {
+        setBanner({
+          type: "err",
+          text:
+            payload.error ??
+            "Nie udało się wysłać formularza. Spróbuj ponownie.",
+        });
+        return;
+      }
+      reset();
+      setBanner({
+        type: "ok",
+        text: "Dziękujemy! Wiadomość została wysłana — wkrótce się odezwiemy.",
+      });
+    } catch {
+      setBanner({
+        type: "err",
+        text: "Brak połączenia z serwerem. Sprawdź internet i spróbuj ponownie.",
+      });
+    }
   }
 
   const id = (field: string) => `${idPrefix}-${field}`;
@@ -69,7 +96,14 @@ export function ContactForm({
       <h3 className="font-[family-name:var(--font-playfair)] text-xl font-semibold text-[#3D3D3D]">
         {title}
       </h3>
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-6" noValidate>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="mt-6"
+        noValidate
+        onChange={() => {
+          if (banner?.type === "ok") setBanner(null);
+        }}
+      >
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label htmlFor={id("name")} className="text-[#4A4A4A]">
@@ -169,19 +203,29 @@ export function ContactForm({
         </div>
         <button
           type="submit"
-          className="mt-8 w-full rounded-[25px] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-[filter] duration-200 hover:brightness-[0.95] sm:w-auto"
+          disabled={isSubmitting}
+          className="mt-8 w-full rounded-[25px] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-[filter] duration-200 hover:brightness-[0.95] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
           style={{
             background: "linear-gradient(to right, #C9A99A, #9BAA94)",
           }}
         >
-          Wyślij zapytanie
+          {isSubmitting ? "Wysyłanie…" : "Wyślij zapytanie"}
         </button>
-        {isSubmitSuccessful && (
-          <p className="mt-3 text-sm text-[#7D8E74]" role="status">
-            Dziękujemy! Wkrótce się odezwiemy. (Demo, formularz bez backendu)
+        {banner && (
+          <p
+            className={
+              banner.type === "ok"
+                ? "mt-3 text-sm text-[#7D8E74]"
+                : "mt-3 text-sm text-destructive"
+            }
+            role="status"
+          >
+            {banner.text}
           </p>
         )}
       </form>
     </div>
   );
 }
+
+export type { ContactFormValues };

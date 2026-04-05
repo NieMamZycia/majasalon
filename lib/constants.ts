@@ -22,7 +22,7 @@ export const IMAGES = {
   manicure: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=800&q=80",
   hybryda: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=800&q=80",
   zel: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=800&q=80",
-  zdobienia: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80",
+  zdobienia: "/images/zdobienia.png",
   salon: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
 } as const;
 

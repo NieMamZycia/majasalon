@@ -16,7 +16,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Manicure",
     description:
       "Klasyczny i kombinowany manicure z dbałością o skórki i kształt paznokcia.",
-    priceFrom: "od 45 zł",
+    priceFrom: "od 60 zł",
     image: IMAGES.manicure,
     imageAlt:
       "Manicure we Włocławku w salonie BASE STUDIO, profesjonalna stylizacja paznokci",
@@ -27,7 +27,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Hybryda",
     description:
       "Trwała stylizacja hybrydowa z bogatą gamą kolorów i pięknym połyskiem.",
-    priceFrom: "od 90 zł",
+    priceFrom: "od 100 zł",
     image: IMAGES.hybryda,
     imageAlt: "Stylizacja hybrydowa paznokci salon Włocławek BASE STUDIO",
     href: "/uslugi/hybryda",
@@ -37,7 +37,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Żel",
     description:
       "Przedłużanie i wzmacnianie paznokci żelem, idealne na specjalne okazje.",
-    priceFrom: "od 110 zł",
+    priceFrom: "od 150 zł",
     image: IMAGES.zel,
     imageAlt: "Paznokcie żelowe Włocławek, BASE STUDIO salon paznokci",
     href: "/cennik",
@@ -47,9 +47,10 @@ export const SERVICES: ServiceItem[] = [
     title: "Zdobienia",
     description:
       "French, ombre, folie, stemple i artystyczne wzory dopasowane do Twojego stylu.",
-    priceFrom: "od 15 zł",
+    priceFrom: "dopłata +15 zł",
     image: IMAGES.zdobienia,
-    imageAlt: "Zdobienia paznokci artystyczne Włocławek BASE STUDIO",
+    imageAlt:
+      "Zdobienia i nail art — geometria, cyrkonie, brokat i złote akcenty, BASE STUDIO Włocławek",
     href: "/galeria",
   },
 ];

@@ -7,6 +7,14 @@ import { GALLERY_ITEMS } from "@/lib/gallery-data";
 export function FilterableMasonry() {
   const [lightbox, setLightbox] = useState<number | null>(null);
 
+  if (GALLERY_ITEMS.length === 0) {
+    return (
+      <p className="rounded-2xl border border-dashed border-[#B8C9B5]/60 bg-[#FAF7F4] px-6 py-14 text-center text-sm text-[#6B6B6B]">
+        Galeria zostanie wkrótce uzupełniona nowymi realizacjami.
+      </p>
+    );
+  }
+
   return (
     <>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

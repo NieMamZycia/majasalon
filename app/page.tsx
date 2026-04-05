@@ -8,6 +8,9 @@ import { PackagesSection } from "@/components/sections/packages-section";
 import { PromotionsSection } from "@/components/sections/promotions-section";
 import { LocationSection } from "@/components/sections/location";
 
+/** Ustaw na `true`, aby ponownie pokazać sekcję „Transformacje / Przed i po”. */
+const SHOW_BEFORE_AFTER_SECTION = false;
+
 export default function HomePage() {
   return (
     <>
@@ -15,7 +18,7 @@ export default function HomePage() {
       <AboutSection />
       <ServicesSection />
       <GalleryPreviewSection />
-      <BeforeAfterSection />
+      {SHOW_BEFORE_AFTER_SECTION && <BeforeAfterSection />}
       <PricingPreviewSection />
       <PackagesSection />
       <PromotionsSection />

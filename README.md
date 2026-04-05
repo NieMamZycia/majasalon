@@ -28,7 +28,7 @@ npm start
 - **Dane kontaktowe i social:** `lib/constants.ts` (telefon, e-mail, Instagram, Facebook, adres).
 - **Mapa:** stała `MAPS_EMBED` w `lib/constants.ts` — URL osadzonej mapy Google.
 - **Domena SEO / JSON-LD:** w `app/layout.tsx` (`metadataBase`, `siteUrl`) oraz `components/json-ld.tsx` i `app/sitemap.ts` ustaw docelowy URL (np. `https://twoja-domena.pl`).
-- **Formularz kontaktowy (Resend):** skopiuj `.env.example` do `.env.local` i ustaw `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM`. Endpoint: `POST /api/contact` (`app/api/contact/route.ts`). Na Vercel dodaj te same zmienne w ustawieniach projektu. **Nie commituj** pliku `.env.local` — zawiera klucz API.
+- **Formularz kontaktowy (Resend):** ustaw `RESEND_API_KEY` (w `.env.local` lokalnie, na Vercelu w *Environment Variables*). `CONTACT_TO` i `CONTACT_FROM` są opcjonalne — domyślnie używany jest `SITE.email` z `lib/constants.ts`. Domena w polu „from” musi być zweryfikowana w Resend. **Nie commituj** `.env.local`.
 
 ## Struktura tras
 

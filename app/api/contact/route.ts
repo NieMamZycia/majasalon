@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { contactFormSchema } from "@/lib/contact-schema";
+import { SITE } from "@/lib/constants";
 
 function escapeHtml(text: string) {
   return text
@@ -24,13 +25,13 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY?.trim();
-  const to = process.env.CONTACT_TO?.trim();
-  const from = process.env.CONTACT_FROM?.trim();
+  const to = process.env.CONTACT_TO?.trim() || SITE.email;
+  const from = process.env.CONTACT_FROM?.trim() || SITE.email;
 
-  if (!apiKey || !to || !from) {
-    console.error("contact API: brak RESEND_API_KEY, CONTACT_TO lub CONTACT_FROM");
+  if (!apiKey) {
+    console.error("contact API: brak RESEND_API_KEY");
     return NextResponse.json(
-      { error: "Formularz chwilowo niedostępny. Zadzwoń lub napisz bezpośrednio." },
+      { error: "Formularz chwilowo niedostępny. Zadzwoń lub napisz bezpośrednio" },
       { status: 503 },
     );
   }

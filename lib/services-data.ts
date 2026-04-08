@@ -40,7 +40,8 @@ export const SERVICES: ServiceItem[] = [
       "Przedłużanie i wzmacnianie paznokci żelem, idealne na specjalne okazje.",
     priceFrom: "od 150 zł",
     image: IMAGES.zel,
-    imageAlt: "Paznokcie żelowe Włocławek, BASE STUDIO salon paznokci",
+    imageAlt:
+      "Paznokcie żelowe — french w żółci, stokrotki i zdobienia, kształt migdał, BASE STUDIO",
     href: "/cennik",
   },
   {

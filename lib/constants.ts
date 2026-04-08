@@ -21,7 +21,7 @@ export const IMAGES = {
   hero: "/images/hero-base-studio.png",
   manicure: "/images/uslugi-manicure.png",
   hybryda: "/images/hybryda-uslugi.png",
-  zel: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=800&q=80",
+  zel: "/images/zel-uslugi.png",
   zdobienia: "/images/zdobienia-uslugi.png",
   salon: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
 } as const;

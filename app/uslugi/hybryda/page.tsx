@@ -15,7 +15,7 @@ export default function HybrydaPage() {
       title="Stylizacja hybrydowa"
       intro="Trwały połysk i odporność na codzienne czynności, hybryda w BASE STUDIO to jakość i modny wygląd."
       image={IMAGES.hybryda}
-      imageAlt="Hybryda Włocławek, manicure hybrydowy w salonie BASE STUDIO"
+      imageAlt="Hybryda Włocławek — manicure hybrydowy z delikatnymi kwiatowymi zdobieniami, BASE STUDIO"
       paragraphs={[
         "Lakier hybrydowy to jedna z najpopularniejszych metod stylizacji, łączy trwałość z pięknym, błyszczącym wykończeniem. Dobieramy produkty do kondycji Twojej płytki.",
         "W ofercie m.in. jednolite kolory, french, baby boomer oraz lekkie zdobienia. Przed aplikacją przygotowujemy paznokieć, by stylizacja była bezpieczna i estetyczna.",

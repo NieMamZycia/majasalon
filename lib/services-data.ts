@@ -29,7 +29,8 @@ export const SERVICES: ServiceItem[] = [
       "Trwała stylizacja hybrydowa z bogatą gamą kolorów i pięknym połyskiem.",
     priceFrom: "od 100 zł",
     image: IMAGES.hybryda,
-    imageAlt: "Stylizacja hybrydowa paznokci salon Włocławek BASE STUDIO",
+    imageAlt:
+      "Stylizacja hybrydowa — nude z kwiatowymi zdobieniami, kształt squoval, BASE STUDIO",
     href: "/uslugi/hybryda",
   },
   {

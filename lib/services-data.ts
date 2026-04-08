@@ -52,7 +52,7 @@ export const SERVICES: ServiceItem[] = [
     priceFrom: "dopłata +15 zł",
     image: IMAGES.zdobienia,
     imageAlt:
-      "Zdobienia paznokci — stokrotki i złote akcenty na nude, stylizacja BASE STUDIO",
+      "Zdobienia paznokci — malowane tulipany na różu, migdał, stylizacja BASE STUDIO",
     href: "/galeria",
   },
 ];

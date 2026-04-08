@@ -11,9 +11,9 @@ export const SITE = {
     "piętro 1",
     "87-800 Włocławek",
   ] as const,
-  instagram: "https://www.instagram.com/basestudio_wloclawek",
-  instagramHandle: "@basestudio_wloclawek",
-  facebook: "https://www.facebook.com/basestudio",
+  instagram: "https://www.instagram.com/basestudionails/",
+  instagramHandle: "@basestudionails",
+  facebook: "https://www.facebook.com/profile.php?id=61573267797676",
   facebookLabel: "BASE STUDIO Włocławek",
 } as const;
 

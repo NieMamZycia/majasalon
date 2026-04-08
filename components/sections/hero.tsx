@@ -7,7 +7,6 @@ import { Phone } from "lucide-react";
 import { GradientButton } from "@/components/gradient-button";
 import { SocialLinks } from "@/components/SocialLinks";
 import { FloatingIcons } from "@/components/floating-icons";
-import { AnimatedCounter } from "@/components/animated-counter";
 import { IMAGES, SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -31,7 +30,7 @@ export function HeroSection() {
       >
         <Image
           src={IMAGES.hero}
-          alt="BASE STUDIO — stylizacja paznokci"
+          alt="Base Studio — stylizacja paznokci"
           fill
           priority
           className="object-cover"
@@ -59,45 +58,14 @@ export function HeroSection() {
             "text-gradient-hero drop-shadow-sm"
           )}
         >
-          BASE STUDIO Stylizacja Paznokci
+          <span className="block">Base Studio</span>
+          <span className="mt-2 block sm:mt-3">Stylizacja Paznokci</span>
         </motion.h1>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.32 }}
-          className="mx-auto mt-10 grid max-w-xl grid-cols-3 gap-4 text-center sm:gap-6"
-        >
-          <div className="rounded-2xl border border-white/15 bg-white/10 px-2 py-4 backdrop-blur-md sm:px-4">
-            <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white sm:text-3xl">
-              <AnimatedCounter value={500} suffix="+" duration={1.8} />
-            </p>
-            <p className="mt-1 text-[10px] uppercase tracking-wider text-white/75 sm:text-xs">
-              zadowolonych gości
-            </p>
-          </div>
-          <div className="rounded-2xl border border-white/15 bg-white/10 px-2 py-4 backdrop-blur-md sm:px-4">
-            <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white sm:text-3xl">
-              <AnimatedCounter value={5} suffix="" duration={1.2} />
-            </p>
-            <p className="mt-1 text-[10px] uppercase tracking-wider text-white/75 sm:text-xs">
-              lat pasji
-            </p>
-          </div>
-          <div className="rounded-2xl border border-white/15 bg-white/10 px-2 py-4 backdrop-blur-md sm:px-4">
-            <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white sm:text-3xl">
-              <AnimatedCounter value={98} suffix="%" duration={1.5} />
-            </p>
-            <p className="mt-1 text-[10px] uppercase tracking-wider text-white/75 sm:text-xs">
-              poleca znajomym
-            </p>
-          </div>
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.52 }}
+          transition={{ delay: 0.35 }}
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <GradientButton href="/kontakt" className="min-w-[200px] px-8 py-3">
@@ -112,7 +80,7 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.62 }}
+          transition={{ delay: 0.45 }}
           className="mt-8"
         >
           <SocialLinks size="md" className="justify-center" />

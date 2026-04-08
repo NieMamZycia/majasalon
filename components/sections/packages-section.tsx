@@ -33,14 +33,8 @@ export function PackagesSection() {
             Pakiety i Vouchery
           </h2>
           <p className="mt-2 text-sm text-[#6B6B6B]">
-            Wybierz pakiet lub voucher. Szczegóły usług na stronie{" "}
-            <a
-              href="/cennik"
-              className="font-medium text-[#7D8E74] underline-offset-2 hover:underline"
-            >
-              cennika
-            </a>
-            .
+            Wybierz pakiet lub voucher. Najpiękniejszy voucher dostępny w salonie
+            stacjonarnie.
           </p>
         </MotionReveal>
 

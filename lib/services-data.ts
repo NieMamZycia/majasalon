@@ -50,7 +50,7 @@ export const SERVICES: ServiceItem[] = [
     priceFrom: "dopłata +15 zł",
     image: IMAGES.zdobienia,
     imageAlt:
-      "Zdobienia i nail art — geometria, cyrkonie, brokat i złote akcenty, BASE STUDIO Włocławek",
+      "Zdobienia paznokci — stokrotki i złote akcenty na nude, stylizacja BASE STUDIO",
     href: "/galeria",
   },
 ];

@@ -28,12 +28,12 @@ export const IMAGES = {
 /** Zdjęcia wnętrza salonu — sekcja „O mnie” (karuzela). */
 export const ABOUT_SALON_SLIDES = [
   {
-    src: "/images/about-salon-2.png",
-    alt: "Salon BASE STUDIO — jasne stanowiska, rośliny i strefa oczekiwania",
+    src: "/images/about-o-mnie-salon.png",
+    alt: "BASE STUDIO — stanowiska manicure, złote logo na ścianie, rośliny i jasne wnętrze salonu",
   },
   {
-    src: "/images/about-salon-3.png",
-    alt: "Przestrzeń BASE STUDIO — recepcja, zielona ściana i lustro",
+    src: "/images/about-o-mnie-wnetrze.png",
+    alt: "BASE STUDIO — detal wnętrza, światło dzienne i dekoracje na biurku",
   },
   {
     src: "/images/about-salon-4.png",

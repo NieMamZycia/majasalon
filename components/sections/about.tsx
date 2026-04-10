@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { Award, Heart, Scissors } from "lucide-react";
+import { AboutSalonCarousel } from "@/components/about-salon-carousel";
 import { MotionReveal } from "@/components/motion-reveal";
 import { SectionShell } from "@/components/section-shell";
-import { IMAGES } from "@/lib/constants";
+import { ABOUT_SALON_SLIDES } from "@/lib/constants";
 
 const features = [
   {
@@ -38,15 +38,8 @@ export function AboutSection() {
         </MotionReveal>
 
         <div className="mt-12 grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          <MotionReveal className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-lg">
-            <Image
-              src={IMAGES.salon}
-              alt="Wnętrze salonu paznokci BASE STUDIO, stylizacja paznokci"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              loading="lazy"
-            />
+          <MotionReveal>
+            <AboutSalonCarousel slides={ABOUT_SALON_SLIDES} />
           </MotionReveal>
 
           <div className="text-left">

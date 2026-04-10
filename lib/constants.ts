@@ -23,8 +23,23 @@ export const IMAGES = {
   hybryda: "/images/hybryda-uslugi.png",
   zel: "/images/zel-uslugi.png",
   zdobienia: "/images/zdobienia-uslugi.png",
-  salon: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
 } as const;
+
+/** Zdjęcia wnętrza salonu — sekcja „O mnie” (karuzela). */
+export const ABOUT_SALON_SLIDES = [
+  {
+    src: "/images/about-salon-2.png",
+    alt: "Salon BASE STUDIO — jasne stanowiska, rośliny i strefa oczekiwania",
+  },
+  {
+    src: "/images/about-salon-3.png",
+    alt: "Przestrzeń BASE STUDIO — recepcja, zielona ściana i lustro",
+  },
+  {
+    src: "/images/about-salon-4.png",
+    alt: "Stanowiska manicure i sofa w salonie BASE STUDIO we Włocławku",
+  },
+] as const;
 
 export const MAPS_EMBED =
   "https://maps.google.com/maps?q=52.64014352936314,19.045186760163656&z=17&hl=pl&output=embed";

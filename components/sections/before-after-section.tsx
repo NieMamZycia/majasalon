@@ -6,6 +6,7 @@ import {
 } from "react-compare-slider";
 import { SectionShell } from "@/components/section-shell";
 import { BEFORE_AFTER_ITEMS } from "@/lib/before-after-data";
+import { cn } from "@/lib/utils";
 
 export function BeforeAfterSection() {
   return (
@@ -24,11 +25,18 @@ export function BeforeAfterSection() {
             </span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Zobacz efekty pracy, przykładowe zestawienia (zdjęcia demonstracyjne).
+            Przesuń suwak w bok, żeby porównać stan przed i po stylizacji.
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
+        <div
+          className={cn(
+            "mx-auto grid",
+            BEFORE_AFTER_ITEMS.length > 1
+              ? "max-w-7xl gap-y-14 gap-x-10 md:grid-cols-2 md:gap-x-16 lg:gap-x-24"
+              : "max-w-lg grid-cols-1 gap-10",
+          )}
+        >
           {BEFORE_AFTER_ITEMS.map((item, idx) => (
             <div key={idx} className="space-y-4">
               <ReactCompareSlider
@@ -36,18 +44,28 @@ export function BeforeAfterSection() {
                   <ReactCompareSliderImage
                     src={item.before}
                     alt="Przed stylizacją, BASE STUDIO Włocławek"
-                    style={{ height: "100%", width: "100%", objectFit: "cover" }}
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      objectFit: "contain",
+                      objectPosition: "center",
+                    }}
                   />
                 }
                 itemTwo={
                   <ReactCompareSliderImage
                     src={item.after}
                     alt="Po stylizacji, BASE STUDIO Włocławek"
-                    style={{ height: "100%", width: "100%", objectFit: "cover" }}
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      objectFit: "contain",
+                      objectPosition: "center",
+                    }}
                   />
                 }
-                className="overflow-hidden rounded-2xl shadow-xl"
-                style={{ height: 380, maxHeight: "70vh" }}
+                className="overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5"
+                style={{ height: 440, maxHeight: "75vh" }}
                 defaultPosition={50}
               />
               <p className="text-center text-sm font-semibold text-foreground">

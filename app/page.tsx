@@ -9,7 +9,7 @@ import { PromotionsSection } from "@/components/sections/promotions-section";
 import { LocationSection } from "@/components/sections/location";
 
 /** Ustaw na `true`, aby ponownie pokazać sekcję „Transformacje / Przed i po”. */
-const SHOW_BEFORE_AFTER_SECTION = false;
+const SHOW_BEFORE_AFTER_SECTION = true;
 
 export default function HomePage() {
   return (

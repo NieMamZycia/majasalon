@@ -38,39 +38,43 @@ export function BeforeAfterSection() {
           )}
         >
           {BEFORE_AFTER_ITEMS.map((item, idx) => (
-            <div key={idx} className="space-y-4">
-              <ReactCompareSlider
-                itemOne={
-                  <ReactCompareSliderImage
-                    src={item.before}
-                    alt="Przed stylizacją, BASE STUDIO Włocławek"
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      objectFit: "contain",
-                      objectPosition: "center",
-                    }}
+            <div key={idx} className="flex w-full justify-center">
+              <div className="w-[min(100%,20rem)] space-y-4 sm:w-[min(100%,22rem)]">
+                <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5">
+                  <ReactCompareSlider
+                    itemOne={
+                      <ReactCompareSliderImage
+                        src={item.before}
+                        alt="Przed stylizacją, BASE STUDIO Włocławek"
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "contain",
+                          objectPosition: "center",
+                        }}
+                      />
+                    }
+                    itemTwo={
+                      <ReactCompareSliderImage
+                        src={item.after}
+                        alt="Po stylizacji, BASE STUDIO Włocławek"
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "contain",
+                          objectPosition: "center",
+                        }}
+                      />
+                    }
+                    className="h-full w-full"
+                    style={{ height: "100%", width: "100%" }}
+                    defaultPosition={50}
                   />
-                }
-                itemTwo={
-                  <ReactCompareSliderImage
-                    src={item.after}
-                    alt="Po stylizacji, BASE STUDIO Włocławek"
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      objectFit: "contain",
-                      objectPosition: "center",
-                    }}
-                  />
-                }
-                className="overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5"
-                style={{ height: 440, maxHeight: "75vh" }}
-                defaultPosition={50}
-              />
-              <p className="text-center text-sm font-semibold text-foreground">
-                {item.caption}
-              </p>
+                </div>
+                <p className="text-center text-sm font-semibold text-foreground">
+                  {item.caption}
+                </p>
+              </div>
             </div>
           ))}
         </div>
